@@ -45,7 +45,12 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 
 /* HERO (home only) */
 .hero{padding:96px 0 64px; position:relative; overflow:hidden;}
-.hero .wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+.hero-bg{position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none;}
+.hero::before{
+  content:''; position:absolute; inset:0; z-index:0;
+  background:radial-gradient(ellipse 70% 60% at 28% 35%, rgba(16,22,31,0.32), rgba(16,22,31,0.9) 72%);
+}
+.hero .wrap{position:relative; z-index:1; display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
 .eyebrow{
   display:inline-flex; align-items:center; gap:8px;
   font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;
