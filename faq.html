@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preguntas frecuentes — Kanchazo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="dot"></span>Kanchazo</a>
+    <div class="navlinks">
+      <a href="index.html">Inicio</a>
+      <a href="faq.html" class="active">Preguntas (FAQ)</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+    <a class="nav-cta" href="contacto.html">Unirme a la lista</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="wrap">
+    <span class="kicker">Ayuda</span>
+    <h1>Preguntas frecuentes</h1>
+    <p>Todo lo que necesitas saber antes de tu primer kanchazo.</p>
+  </div>
+</div>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="faq-list" id="faqList">
+
+      <div class="faq-item open">
+        <div class="faq-q"><span>¿En qué distritos va a estar disponible Kanchazo?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>Lanzamos el piloto en los distritos de Lima con más canchas de fútbol, vóley y básquet cercanas entre sí. Si dejas tu correo en la lista de espera, te avisamos apenas tu distrito quede habilitado.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Cómo pago mi inscripción a un partido?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>Desde la app, con Yape, Plin o tarjeta. Tu cupo queda confirmado apenas se acredita el pago, sin transferencias sueltas ni coordinar con el organizador.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Qué pasa si un partido no llega al cupo mínimo?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>Se cancela automáticamente y se te reembolsa el pago. Te avisamos por notificación con tiempo suficiente para buscar otro partido en tu horario.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Puedo registrar mi equipo y buscar rivales?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>Sí. Puedes registrar tu equipo de fútbol, vóley o básquet, publicar tu disponibilidad y buscar rivales de nivel similar para retarlos directamente desde la app.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Ya organizo partidos por WhatsApp. ¿Cómo los paso a Kanchazo?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>Escríbenos desde la página de contacto. Te habilitamos como organizador, migras tu grupo y desde ahí Kanchazo se encarga del cobro de cupos; tú te quedas con una comisión por cada partido que armas.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>¿La app cobra alguna comisión al jugador?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>El precio que ves en cada partido ya incluye todo: cancha, organización y comisión de la plataforma. No hay cargos ocultos al pagar.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Cuándo puedo descargar la app?</span><span class="icon">+</span></div>
+        <div class="faq-a"><p>Todavía estamos en fase de validación. Anótate en la lista de espera para ser de los primeros en recibir el enlace de descarga cuando abramos tu distrito.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>¿Tu pregunta no está aquí?</h2>
+    <p>Escríbenos directamente y te respondemos en menos de 48 horas.</p>
+    <a class="btn-primary" href="contacto.html">Ir a contáctanos →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kanchazo. Proyecto en validación — Lima, Perú.</span>
+    <div class="footer-links">
+      <a href="nosotros.html">Nosotros</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contacto.html">Contáctanos</a>
+      <a href="terminos.html">Términos</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
